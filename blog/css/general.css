@@ -28,10 +28,10 @@ ul {
 /*header*/
 .banner-top{
     float: left;
-    color: white;
-    font-family: fantasy;
     width: 70%;
     padding: 50px 0 0 50px;
+    color: white;
+    font-family: fantasy;
 }
 
 
