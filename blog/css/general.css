@@ -29,7 +29,8 @@ ul {
 .banner-top{
     float: left;
     width: 70%;
-    padding: 50px 0 0 50px;
+    font-size: 50px;
+    padding: 10px 0 0 50px;
     color: white;
     font-family: fantasy;
 }
