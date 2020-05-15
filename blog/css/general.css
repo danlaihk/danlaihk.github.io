@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*width = border+content+padding*/
+}
+
+body{
+    background-color: black;
+    margin: 0;
+}
+
+header,footer,main,nav, .row {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header::after,footer::after,main::after,nav::after, .row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ul {
+    list-style-type: none;
+}
+/*header*/
+.banner-top{
+    float: left;
+    width: 70%;
+    padding: 50px 0 0 50px;
+}
+
+
+
+.widget-top{
+
+    float: right;
+    width: 30%;
+}
+.widget-top .col-social{
+
+    margin-left: 16%;
+}
+
+.widget-top li {
+    float: left;
+
+}
+
+.widget-top .first{
+    margin-left: 0;
+
+}
+.widget-top .single{
+    margin-left:6px;
+    margin-right: 5px;
+
+}
+
+.widget-top li span{
+    color: white;
+    font-size: 30px;
+
+
+}
+
+.widget-top .fa-2x{
+
+    font-size: 15px;
+    margin-top: 6px;
+
+}
+
+.widget-top .col-input{
+    width: 47%;
+    margin: 5px 0 0 27% ;
+
+}
+
+.widget-top .submit{
+    margin-left: 0;
+    border: 0px;
+    background-color: white;
+}
+
+.widget-top .submit{
+    width: 20%;
+    border: 0;
+    outline: none;
+}
+.widget-top .inputbox{
+    width: 75%;
+    border: 0px;
+    outline: none;
+    padding-left: 10px;
+}
+/*nav*/
+.ul-nav{
+    margin: 0;
+    padding: 0 4% 0 4%;
+    width: 100%;
+}
+.ul-nav li{
+    float: left;
+    color: white;
+    background-color: red;
+    border: 1px solid white;
+    font-size: 16px;
+    height: 50px;
+
+    text-align: center;
+
+    margin: auto;
+    width: 16%;
+    padding: 10px;
+
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    border-left-color: rgba(0, 0, 0, 0.1);
+}
+.ul-nav li:hover{
+    background-image: linear-gradient(to bottom, #ca2e0d, #e86a1f);
+}
+/*general*/
+
+.bg-white{
+    background-color: white;
+}
+.invisible{
+    visibility: hidden;
+}
+.m-only{
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    /*header*/
+    .widget-top {
+      width: 100%;
+
+    }
+    .widget-top .col-social{
+
+        margin-left: 13%;
+    }
+    .widget-top .col-input{
+        width: 57%;
+        margin-left: 20%;
+    }
+
+    .widget-top .submit{
+        width: 20%;
+
+    }
+    .widget-top .inputbox{
+        width: 75%;
+
+    }
+
+    .banner-top {
+        width: 100%;
+        padding:35px 30px 0px;
+    }
+
+    .banner-top img{
+        width: 100%;
+    }
+
+    /*genearl*/
+    .m-only{
+        display: block;
+    }
+    .d-only{
+        display: none;
+    }
+}
