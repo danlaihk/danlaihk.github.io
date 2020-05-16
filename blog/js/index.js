@@ -2,10 +2,12 @@
 window.addEventListener("load", function(event) {
     //entry point
     page.init();
+    //console.log(document.querySelectorAll('[data-renderer="carousel"]'));
 });
 
 
 let page = {
+    labels:{},
     prop:{
         lang: "tc",
         renderer: "[data-renderer='page']"
@@ -21,10 +23,8 @@ let page = {
 
 
 page.carousel.init = function(){
-    let slideHtml = getTemplate(),
-    self = this,
-    slideNum = 3,
-    imgArr = [ //use json later
+
+    const imgArr = [ //use json later
         'img_lights_wide.jpg',
         'img_mountains_wide.jpg',
         'img_nature_wide.jpg',
@@ -34,9 +34,34 @@ page.carousel.init = function(){
         'Caption Two',
         'Caption Three'
     ],
+    /*carousel functions */
+   
+    showSlides= function(n ){
+        let i,
+
+        slides = document.getElementsByClassName("mySlides"),
+        dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {self.slideIndex = 1}    
+        if (n < 1) {self.slideIndex = slides.length}
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+      
+        slides[self.slideIndex-1].style.display = "block";  
+        dots[self.slideIndex-1].className += " active";
+    };
+    let slideHtml = getTemplate(),
+    self = this,
+    slideNum = 3,
+    
     slideList = [],
     vmData;
-
+    self.slideIndex = 1;
 
     for(let i = 0; i < slideNum; i++){
         let rowObj = {
@@ -51,48 +76,34 @@ page.carousel.init = function(){
     vmData = {
         el: self.renderer,
         data:{
-            slideIndex:1,
             slideList:slideList
         },
         mounted: function () {
-            this.showSlides(this.slideIndex);
+            showSlides(self.slideIndex);
         },
         methods:{
             plusSlides: function(n) {
-                this.showSlides(this.slideIndex += n);
+                showSlides(self.slideIndex += n);
             },
-            currentSlide: function(n) {
-                this.showSlides(this.slideIndex = n);
-            },
-            showSlides: function(n) {
-                let i,
-
-                slides = document.getElementsByClassName("mySlides"),
-                dots = document.getElementsByClassName("dot");
-
-                if (n > slides.length) {this.slideIndex = 1}    
-                if (n < 1) {this.slideIndex = slides.length}
-       
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-              
-                slides[this.slideIndex-1].style.display = "block";  
-                dots[this.slideIndex-1].className += " active";
-            }
+         
         }
     };
     
    
-    Vue.component('slides', {
+    Vue.component('temp-slides', {
         props:['row'],
         template: slideHtml
     })
 
-
+    Vue.component('temp-indicator',{
+        props:['row'],
+        template: '<span class="dot" @click="currentSlide(row.index)"></span>',
+        methods:{
+            currentSlide: function(n){
+                showSlides(self.slideIndex = n);
+            }
+        }
+    })
     this.vm = new Vue(vmData);
 
 

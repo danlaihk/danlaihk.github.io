@@ -35,7 +35,7 @@
             <div class="banner-top col-resize-m left"><h1>My Blog</h1></div>
             <div class="widget-top col-resize-m right">
                 <div class="row">
-                    <div class="col-social">
+                    <div id="col_social" class="col-social">
                         <ul class="ul-social" >
                             <li class="item first left" >
                                 <a javascript: void(0);>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="row">
                     <div class="bg-white col-input">
-                        <input id="searchword" name="searchword" class="inputbox" type="text" value="">
+                        <input id="headInput" name="searchword" class="inputbox" type="text" value="">
                         <button type="submit" class="submit"><i class="fa fa-search"></i></button>
                     </div>
 
@@ -127,7 +127,7 @@
             <div class="row"  data-renderer="carousel">
                 <!-- Slideshow container -->
                 <div class="container">
-                    <slides v-bind:row="slide" v-for="slide in slideList" ></slides>
+                    <temp-slides v-bind:row="slide" v-for="slide in slideList" ></temp-slides>
 
                     <a class="prev" @click="plusSlides(-1)" >&#10094;</a>
                     <a class="next"  @click="plusSlides(1)">&#10095;</a>
@@ -136,9 +136,12 @@
                 
                 
                 <div class="indicator" >
+                    <temp-indicator v-bind:row="slide" v-for="slide in slideList"></temp-indicator>
+                    <!--
                     <span class="dot" @click="currentSlide(1)"></span>
                     <span class="dot" @click="currentSlide(2)"></span>
                     <span class="dot" @click="currentSlide(3)"></span>
+                    -->
                 </div>
             </div>
 
