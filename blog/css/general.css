@@ -156,10 +156,7 @@ footer .links a{
 
 @media screen and (max-width: 375px) {
     /*header*/
-    .widget-top {
-      width: 100%;
-
-    }
+   
     .widget-top .col-social{
 
         margin-left: 13%;
@@ -179,13 +176,9 @@ footer .links a{
     }
 
     .banner-top {
-        width: 100%;
         padding:35px 30px 0px;
     }
 
-    .banner-top img{
-        width: 100%;
-    }
 
 
     .select-nav{
@@ -195,12 +188,13 @@ footer .links a{
     }
 
     /*footer*/
-    footer .links li{
-        float: none;
-    }
-
+  
 
     /*genearl*/
+    .col-resize-m{
+        /*col for deskt*/
+        width: 100%;
+    }
     .m-only{
         display: block;
     }
