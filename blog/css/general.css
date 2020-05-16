@@ -121,6 +121,14 @@ ul {
     border-bottom-color: rgba(0, 0, 0, 0.25);
     border-left-color: rgba(0, 0, 0, 0.1);
 }
+.ul-nav .dropdown{
+    display: none;
+    background-color: inherit;
+    position: absolute;
+    top: 36%;
+    left: 4%;
+    width: 18%;
+}
 .ul-nav li:hover{
     background-image: linear-gradient(to bottom, #ca2e0d, #e86a1f);
 }
