@@ -132,6 +132,12 @@ ul {
 .ul-nav li:hover{
     background-image: linear-gradient(to bottom, #ca2e0d, #e86a1f);
 }
+
+.select-nav{
+    margin: 5% 0 0 20%;
+    width: 57.5%;
+    padding: 0 2%;
+}
 /*general*/
 
 .bg-white{
