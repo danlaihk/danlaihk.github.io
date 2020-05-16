@@ -133,6 +133,15 @@ ul {
     background-image: linear-gradient(to bottom, #ca2e0d, #e86a1f);
 }
 
+/*footer*/
+footer .links li{
+    float: left;
+}
+footer .links a{
+    color: white;
+    text-decoration: none;
+}
+
 /*general*/
 
 .bg-white{
@@ -185,6 +194,12 @@ ul {
         width: 57.5%;
         padding: 0 2%;
     }
+
+    /*footer*/
+    footer .links li{
+        float: none;
+    }
+
 
     /*genearl*/
     .m-only{
