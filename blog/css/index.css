@@ -1,18 +1,23 @@
 /*carousel*/
+
 .container{
-    max-width: 1000px;
+    max-width: 88.4%;
     position: relative;
 
-    font-family: Verdana, sans-serif; margin:0
+    font-family: Verdana, sans-serif; 
+    margin-left: 4%;
 }
+
 .slider{
     width: 100%;
     padding: 0 7.6% 0 4%;
     border: 1px solid black;
 }
+.indicator{
+  text-align:center;
+  padding-right: 4%;
+}
 
-
-body {}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
@@ -23,10 +28,17 @@ img {vertical-align: middle;}
 }
 
 /* Next & previous buttons */
+.prev{
+  left: 5%;
+}
+.next{
+  left: 95%;
+}
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
+ 
   width: auto;
   padding: 16px;
   margin-top: -22px;

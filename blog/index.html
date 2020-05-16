@@ -124,40 +124,21 @@
         <main data-renderer="main">
             <link href="./css/index.css" rel="stylesheet">
             <script src="./js/index.js"></script>
-            <div class="row" >
+            <div class="row"  data-renderer="carousel">
                 <!-- Slideshow container -->
-                <div class="container" data-renderer="container">
-                    <slides v-bind:row="slide" v-for="slide in slideList"></slides>
-                    <!--
-                    <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="./images/img_lights_wide.jpg" style="width:100%">
-                    <div class="text">Caption Text</div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="./images/img_mountains_wide.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="./images/img_nature_wide.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                    </div>
-                    -->
-                    
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="container">
+                    <slides v-bind:row="slide" v-for="slide in slideList" ></slides>
+
+                    <a class="prev" @click="plusSlides(-1)" >&#10094;</a>
+                    <a class="next"  @click="plusSlides(1)">&#10095;</a>
                 </div>
                 <br>
                 
-                <!-- The dots/circles -->
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                
+                <div class="indicator" >
+                    <span class="dot" @click="currentSlide(1)"></span>
+                    <span class="dot" @click="currentSlide(2)"></span>
+                    <span class="dot" @click="currentSlide(3)"></span>
                 </div>
             </div>
 

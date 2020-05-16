@@ -22,6 +22,8 @@ let page = {
 
 page.carousel.init = function(){
     let slideHtml = getTemplate(),
+    self = this,
+    slideNum = 3,
     imgArr = [ //use json later
         'img_lights_wide.jpg',
         'img_mountains_wide.jpg',
@@ -31,37 +33,78 @@ page.carousel.init = function(){
         'Caption Text',
         'Caption Two',
         'Caption Three'
-    ]
+    ],
+    slideList = [],
     vmData;
 
-    
+
+    for(let i = 0; i < slideNum; i++){
+        let rowObj = {
+            index: i+1,
+            caption: captionArr[i],
+            img: 'images/'+imgArr[i]
+        };
+        slideList.push(rowObj);
+    }
+
 
     vmData = {
-        el: '[data-renderer="container"]',
+        el: self.renderer,
         data:{
-            slideList:[
-                {
-                    index:1
-                },
-            ]
+            slideIndex:1,
+            slideList:slideList
+        },
+        mounted: function () {
+            this.showSlides(this.slideIndex);
+        },
+        methods:{
+            plusSlides: function(n) {
+                this.showSlides(this.slideIndex += n);
+            },
+            currentSlide: function(n) {
+                this.showSlides(this.slideIndex = n);
+            },
+            showSlides: function(n) {
+                let i,
+
+                slides = document.getElementsByClassName("mySlides"),
+                dots = document.getElementsByClassName("dot");
+
+                if (n > slides.length) {this.slideIndex = 1}    
+                if (n < 1) {this.slideIndex = slides.length}
+       
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+              
+                slides[this.slideIndex-1].style.display = "block";  
+                dots[this.slideIndex-1].className += " active";
+            }
         }
     };
-
-
-
+    
+   
     Vue.component('slides', {
-        prop:['row'],
+        props:['row'],
         template: slideHtml
     })
 
+
     this.vm = new Vue(vmData);
+
+
+  
 
     function getTemplate(){
         let slideHtml = '';
+        
         slideHtml += '<div class="mySlides fade">';
-            slideHtml += '<div class="numbertext">1 / 3</div>';
-            slideHtml += '<img src="./images/img_lights_wide.jpg" style="width:100%">';
-            slideHtml += '<div class="text">Caption Text</div>';
+            slideHtml += '<div class="numbertext">{{row.index}} / 3</div>';
+            slideHtml += '<img :src="row.img" style="width:100%">';
+            slideHtml += '<div class="text">{{row.caption}}</div>';
         slideHtml += '</div>';
         return slideHtml;
     }
@@ -80,23 +123,5 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
-function showSlides(n) {
-  let i;
-  
-  let slides = document.getElementsByClassName("mySlides");
-  
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}*/
+*/
 
