@@ -137,7 +137,7 @@ ul {
 }
 .footer-links {
     width: 70%;
-    padding: 5% 7.6% 0 0;
+    padding: 5% 7.5% 0 0;
     
     margin-left: auto;
    
@@ -148,7 +148,7 @@ ul {
 }
 
 .footer-links .first{
-    padding-left: 0;
+    padding-left: 0.8%;
     border: 0;
 }
 .footer-links .last{
@@ -190,7 +190,7 @@ ul {
 
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 576px) {
     /*header*/
     
     .banner-top {
