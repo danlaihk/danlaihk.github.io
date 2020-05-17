@@ -8,9 +8,7 @@ class pageComponent{
 window.addEventListener("load", function(event) {
     general.init();
 });
-window.addEventListener("reisze", function(){
-    general.init();
-});
+
 
 
 let general = {
@@ -29,7 +27,7 @@ let general = {
         let self = this;
         
         
-        if(!self.checkMobile()) {self.adjustElement();}
+       // if(!self.checkMobile()) {self.adjustElement();}
         
     },
     adjustElement: function(){

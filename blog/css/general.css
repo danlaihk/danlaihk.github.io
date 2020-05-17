@@ -1,3 +1,4 @@
+/* tablet max 1024  mobile max 719 */
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -26,56 +27,56 @@ ul {
     list-style-type: none;
 }
 /*header*/
+/*banner top*/
 .banner-top{
     width: 70%;
-    padding: 0 0 0 4%;
+    padding-left: 5%;
     color: white;
 }
 
 .banner-top h1{
     font-size: 50px;
-    font-family: fantasy;
 }
 
 
+/*top widget*/
 .widget-top{
     width: 30%;
-}
-.widget-top .col-social{
+    padding-right: 5%;
 
-    margin-left: 16%;
 }
 
-
-
-.widget-top .first{
-    margin-left: 0;
-
+/*top social*/
+.col-social{
+    width: 100%;
+    text-align: right;
+}
+.col-social .item{
+    text-align: center;
+}
+.widget-top .fa-2x{
+    vertical-align: middle;
+    font-size: 15px;
+}
+.widget-top .spacer{
+    padding-left: 1%;
 }
 .widget-top .single{
-    margin-left:6px;
-    margin-right: 5px;
-
-}
-
-.widget-top li span{
-    color: white;
+    vertical-align: middle;
     font-size: 30px;
-
-
-}
-
-.widget-top .fa-2x{
-
-    font-size: 15px;
-    margin-top: 6px;
+    padding-right: 2%;
 
 }
+.widget-top .single.last{
+    
+    padding-right: 0%;
 
+}
+/*top input*/
 .widget-top .col-input{
     width: 47%;
-    margin: 5px 0 0 27% ;
-
+    margin-top: 3%;
+   
 }
 
 .widget-top .submit{
@@ -96,23 +97,44 @@ ul {
     padding-left: 10px;
 }
 /*nav*/
-.ul-nav{
-    margin: 0;
-    padding: 0 4% 0 4%;
+.nav{
+    height: 50px;
+    margin: 0 5% 2%;
     width: 100%;
+    margin: 0;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: row;
 }
-.ul-nav li{
+
+.nav .item{
+    vertical-align: middle;
 
     color: white;
     background-color: red;
     border: 1px solid white;
     font-size: 16px;
     height: 50px;
+    margin: auto;
+    width: 16%;
+    padding: 10px;
+
+}
+/*
+.nav .item{
+    
+    color: white;
+    background-color: red;
+    border: 1px solid white;
+    font-size: 16px;
+    height: 50px;
+
 
     text-align: center;
 
     margin: auto;
-    width: 16%;
+    width: 100%;
     padding: 10px;
 
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -121,7 +143,7 @@ ul {
     border-bottom-color: rgba(0, 0, 0, 0.25);
     border-left-color: rgba(0, 0, 0, 0.1);
 }
-.ul-nav .dropdown{
+.nav .dropdown{
     display: none;
     background-color: inherit;
     position: absolute;
@@ -129,9 +151,9 @@ ul {
     left: 4%;
     width: 18%;
 }
-.ul-nav li:hover{
+.nav .item:hover{
     background-image: linear-gradient(to bottom, #ca2e0d, #e86a1f);
-}
+}*/
 
 /*footer*/
 
@@ -195,11 +217,14 @@ ul {
     flex-wrap: nowrap;
 }
 
-@media screen and (max-width: 576px) {
+/*tablet*/
+@media screen and (max-width: 1024px) {
 }
 
 
-@media screen and (max-width: 768px) {
+
+/*mobile*/
+@media screen and (max-width: 719px) {
     /*header*/
     
     .banner-top {
