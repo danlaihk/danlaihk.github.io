@@ -76,11 +76,12 @@ ul {
 .widget-top .col-input{
     width: 47%;
     margin-top: 3%;
-    
+    vertical-align: middle;
 }
 
 .widget-top .submit{
     margin-left: 0;
+    padding-top: 2%;
     border: 0px;
     background-color: white;
 }
