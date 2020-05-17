@@ -64,7 +64,7 @@ ul {
 .widget-top .single{
     vertical-align: middle;
     font-size: 30px;
-    padding-right: 2%;
+    padding-right: 1.2%;
 
 }
 .widget-top .single.last{
@@ -76,7 +76,7 @@ ul {
 .widget-top .col-input{
     width: 47%;
     margin-top: 3%;
-   
+    
 }
 
 .widget-top .submit{
@@ -97,63 +97,37 @@ ul {
     padding-left: 10px;
 }
 /*nav*/
-.nav{
-    height: 50px;
-    margin: 0 5% 2%;
-    width: 100%;
-    margin: 0;
-    
-    text-align: center;
-    display: flex;
-    flex-direction: row;
+.nav {
+    list-style-type: none;
+    margin: 0 4%;
+    padding: 0 0.5% 0 1%;
+    margin: 0 4.9%;
+    overflow: hidden;   
+    background-color: red;
 }
 
-.nav .item{
-    vertical-align: middle;
-
-    color: white;
+.nav li {
+    float: left;
+    width: 16.6%;
     background-color: red;
-    border: 1px solid white;
-    font-size: 16px;
-    height: 50px;
-    margin: auto;
-    width: 16%;
-    padding: 10px;
-
-}
-/*
-.nav .item{
-    
-    color: white;
-    background-color: red;
-    border: 1px solid white;
-    font-size: 16px;
-    height: 50px;
-
-
-    text-align: center;
-
-    margin: auto;
-    width: 100%;
-    padding: 10px;
-
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
     border-top-color: rgba(0, 0, 0, 0.1);
     border-right-color: rgba(0, 0, 0, 0.1);
     border-bottom-color: rgba(0, 0, 0, 0.25);
     border-left-color: rgba(0, 0, 0, 0.1);
 }
-.nav .dropdown{
-    display: none;
-    background-color: inherit;
-    position: absolute;
-    top: 36%;
-    left: 4%;
-    width: 18%;
+
+.nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
 }
-.nav .item:hover{
+.nav li:hover{
     background-image: linear-gradient(to bottom, #ca2e0d, #e86a1f);
-}*/
+}
 
 /*footer*/
 
@@ -163,32 +137,36 @@ ul {
     color:white;
     font-size: 30px;
     font-family: fantasy;
-    padding: 5% 0 0 4%;
+    padding: 5% 0 0 5%;
 }
 .footer-links {
     width: 70%;
-    padding: 5% 7.5% 0 0;
+    padding: 5% 5% 0 0;
     
     margin-left: auto;
    
 
 }
 .footer-links ul{
-    width: 90%;
+    width: 100%;
 }
 
 .footer-links .first{
-    padding-left: 0.8%;
+    padding-left: 20%;
     border: 0;
 }
 .footer-links .last{
-    padding-right: 0;
+    margin-right: 0;
 }
 .footer-links li{
-    padding: 0 3%;
+    padding-left: 1%;
+    margin: 0 3% 0 0;
     border-left: 1px solid lightgray;
+    white-space: nowrap;
     
 }
+
+
 
 .footer-links a{
     color: white;
@@ -218,39 +196,50 @@ ul {
 }
 
 /*tablet*/
+/*
 @media screen and (max-width: 1024px) {
 }
+*/
 
 
 
-/*mobile*/
-@media screen and (max-width: 719px) {
+
+/*tablet*/
+@media screen and (max-width: 1024px) {
     /*header*/
     
     .banner-top {
-        padding:35px 30px 0px;
+        padding-top:5%;
+        padding: 5% 0 2% 0;
+        text-align: center;
     }
     .banner-top h1{
         text-align: center;
         font-size: 30px;
     }
 
+    .widget-top{
+        padding: 0;
+    }
     .widget-top .col-social{
-
-        margin-left: 13%;
+        text-align: center;
+  
     }
     .widget-top .col-input{
-        width: 57%;
-        margin-left: 20%;
+        width: 50%;
+        text-align: center;
+        float: none;
+        margin: 3% 0% 3% 25%;
+        height: 30px;
     }
 
     .widget-top .submit{
         width: 20%;
-
+        padding-top: 1%;
     }
     .widget-top .inputbox{
-        width: 75%;
-
+        width: 80%;
+        padding: 0;
     }
 
 
@@ -266,18 +255,30 @@ ul {
         text-align: center;
     }
     .footer-banner{
-        padding: 5% 2.5% 0 0;
+        padding: 5% 0% 0 0;
     }
-
+    .footer-links{
+        padding: 5% 0;
+    }
     .footer-links ul{
         float: none;
     }
+    
     .footer-links li{
+    
         text-align: center;
         border: 0;
         padding: 0;
+       
+        margin: 1% 27% 1% 23%;
+        /*
+        margin: 1% 25% 1% 25%;
+         */
+        width: 50%;
     }
-
+    .footer-links .first{
+        padding-left: 0;
+    }
     /*genearl*/
     .col-resize-m{
         /*col for deskt*/

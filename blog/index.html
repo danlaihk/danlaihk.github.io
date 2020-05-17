@@ -109,11 +109,17 @@
                
             </div-->
     
-            <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li style="float:right"><a href="#about">About</a></li>
+            <ul class="nav d-only">
+                <li><a href="javascript:void(0);">Main Page</a></li>
+
+                <li><a href="javascript:void(0);">About Us</a></li>
+                <li><a href="javascript:void(0);">Latest News</a></li>
+                <li><a href="javascript:void(0);">Portfolio Page</a></li>
+                <li><a href="javascript:void(0);">Blog</a></li>
+                <li><a href="javascript:void(0);">Contact Us</a></li>
+
+
+            
             </ul>
         </div>
 
@@ -129,18 +135,16 @@
 
                     <a class="prev" @click="plusSlides(-1)" >&#10094;</a>
                     <a class="next"  @click="plusSlides(1)">&#10095;</a>
+
+                    <div class="indicator" >
+                        <temp-indicator v-bind:row="slide" v-for="slide in slideList"></temp-indicator>
+                    
+                    </div>
                 </div>
                 <br>
                 
                 
-                <div class="indicator" >
-                    <temp-indicator v-bind:row="slide" v-for="slide in slideList"></temp-indicator>
-                    <!--
-                    <span class="dot" @click="currentSlide(1)"></span>
-                    <span class="dot" @click="currentSlide(2)"></span>
-                    <span class="dot" @click="currentSlide(3)"></span>
-                    -->
-                </div>
+             
             </div>
 
         </main>

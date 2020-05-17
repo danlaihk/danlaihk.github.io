@@ -1,11 +1,11 @@
 /*carousel*/
 
 .container{
-    max-width: 88.4%;
+    max-width: 100%;
     position: relative;
 
     font-family: Verdana, sans-serif; 
-    margin-left: 4%;
+    margin: 0% 4.9%;
 }
 
 .slider{
@@ -14,8 +14,11 @@
     border: 1px solid black;
 }
 .indicator{
-  text-align:center;
-  padding-right: 4%;
+  text-align: center;
+  position: absolute;
+  bottom: 5%;
+  left: 47.5%;
+  width: 5%;
 }
 
 .mySlides {display: none}
@@ -29,10 +32,10 @@ img {vertical-align: middle;}
 
 /* Next & previous buttons */
 .prev{
-  left: 5%;
+  left: 1%;
 }
 .next{
-  left: 95%;
+  left: 96%;
 }
 .prev, .next {
   cursor: pointer;
@@ -67,7 +70,7 @@ img {vertical-align: middle;}
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 10%;
   width: 100%;
   text-align: center;
 }
@@ -118,4 +121,22 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+@media screen and (max-width: 1024px) {
+  .container{
+    margin: 0 15%;
+  }
+  .indicator{
+    bottom: 0%;
+    left: 25%;
+    width: 50%;
+  }
+
+  .prev{
+    left: 0;
+  }
+  .next{
+    left: 92%;
+  }
 }
