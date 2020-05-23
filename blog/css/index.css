@@ -158,13 +158,39 @@ img {vertical-align: middle;}
 
 
 /******cards*******/
-.row .card-holder{
-  padding: 0 5%;
+.card-holder{
+  padding: 0 0%;
   text-align: center;
   
 }
 .card{
   color: white;
-  border: 1px solid white;
+  text-align: center;
   width: 25%;
+  margin-bottom: 5%;
+   /*border: 1px solid white;*/
+}
+.card-head{
+  text-align: left;
+  font: 18px/32px ubuntubold;
+  padding-bottom: 3%;
+}
+.card-body{
+  
+}
+.card .item-img{
+  text-align: left;
+  width: 94%;
+  margin-right: 6%;
+}
+.card img{
+  max-width: 100%;
+}
+.card .discription{
+  width: 94%;
+  text-align: left;
+  background-color: white;
+  color: black;
+  padding: 5% 10%;
+  margin-right: 6%;
 }
