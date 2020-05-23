@@ -159,38 +159,52 @@ img {vertical-align: middle;}
 
 /******cards*******/
 .card-holder{
-  padding: 0 0%;
+  padding: 0 5%;
   text-align: center;
   
 }
+
+
 .card{
   color: white;
   text-align: center;
   width: 25%;
   margin-bottom: 5%;
-   /*border: 1px solid white;*/
+
+  
 }
+
+
 .card-head{
   text-align: left;
   font: 18px/32px ubuntubold;
   padding-bottom: 3%;
+
 }
-.card-body{
-  
-}
+
 .card .item-img{
   text-align: left;
-  width: 94%;
-  margin-right: 6%;
+  width: 100%;
+  
 }
 .card img{
   max-width: 100%;
+
 }
 .card .discription{
-  width: 94%;
+  width: 100%;
   text-align: left;
   background-color: white;
   color: black;
-  padding: 5% 10%;
-  margin-right: 6%;
+  
+  padding: 10% 10%;
+}
+@media screen and (min-width: 1200px) {
+  .card-holder{
+    margin-left: -2%;
+
+  }
+  .card{
+    padding-left: 2%;
+  }
 }

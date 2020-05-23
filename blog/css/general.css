@@ -17,6 +17,12 @@ header,footer,main,nav, .row {
     padding: 0;
 }
 
+@media screen and (min-width: 1200px){
+    header,footer,main,nav, .row {
+        width: 1240px;
+        
+    }
+}
 header::after,footer::after,main::after,nav::after, .row::after{
     content: "";
     display: table;
@@ -303,3 +309,4 @@ ul {
         display: none;
     }
 }
+
