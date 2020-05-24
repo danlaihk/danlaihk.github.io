@@ -189,7 +189,7 @@ img {vertical-align: middle;}
 .card .item-img{
   text-align: left;
   width: 100%;
-  
+  background: white;
 }
 .card img{
   max-width: 100%;
@@ -230,6 +230,10 @@ img {vertical-align: middle;}
     width: 100%;
   }
 
+  .card .item-img{
+    padding: 5%;
+    margin-bottom: -1px;
+  }
   .card img{
     width: 100%;
   }

@@ -57,7 +57,7 @@ page.carousel.init = function(){
     let slideHtml = getTemplate(),
     self = this,
     slideNum = 3,
-    
+    myslideRect ,
     slideList = [],
     windowWidth,
     nextBtn,
@@ -113,9 +113,25 @@ page.carousel.init = function(){
     windowWidth = window.visualViewport.width;
     nextBtn = document.getElementsByClassName('container')[0].getElementsByClassName('next')[0];
    
+    myslideRect = document.getElementsByClassName('mySlides')[0].getBoundingClientRect();
+    console.log(myslideRect);
 
-    console.log(document.getElementsByClassName('mySlides')[0].clientWidth);
-    nextBtn.style.left = (window.visualViewport.width * 0.9)+ 'px' ;
+  
+    console.log(window.visualViewport.width);
+    
+    if(window.visualViewport.width >= 720 && window.visualViewport.width < 1240){
+        //720 to 1023
+        nextBtn.style.left = (myslideRect.left + myslideRect.width * 0.96)+ 'px' ;
+    }else if(window.visualViewport.width < 720){
+        nextBtn.style.left = (myslideRect.left + myslideRect.width * 0.9)+ 'px' ;
+
+    }else{
+        //more than 1240
+        nextBtn.style.left = (myslideRect.left + myslideRect.width * 0.9)+ 'px' ;
+    }
+
+
+
 
     function getTemplate(){
         let slideHtml = '';
