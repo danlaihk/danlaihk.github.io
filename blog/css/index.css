@@ -24,11 +24,8 @@
 .mySlides {display: none}
 img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
 
-}
+
 
 /* Next & previous buttons */
 .prev{
@@ -123,9 +120,10 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 @media screen and (max-width: 719px){
+  /*
   .next{
     left: 85%;
-  }
+  }*/
 
   .indicator{
     display: none;
@@ -133,17 +131,23 @@ img {vertical-align: middle;}
 }
 
 @media screen and (min-width: 720px) and (max-width: 1024px) {
+  /*
   .next{
     left: 92%;
-  }
+  }*/
  
 
 }
 
 @media screen and (max-width: 1024px) {
   .container{
-    margin: 0 15%;
+  
+    width: 100%;
+    margin: 0;
   }
+
+
+  
   .indicator{
     bottom: 0%;
     left: 25%;
@@ -198,13 +202,35 @@ img {vertical-align: middle;}
   color: black;
   
   padding: 10% 10%;
+
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1240px) {
   .card-holder{
     margin-left: -2%;
-
+    
+ 
   }
   .card{
     padding-left: 2%;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1239px) {
+  .card-holder{
+    margin-left: -2%;
+    padding: 0;
+  }
+  .card{
+    padding-left: 2%;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .card{
+    width: 100%;
+  }
+
+  .card img{
+    width: 100%;
   }
 }

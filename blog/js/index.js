@@ -2,7 +2,6 @@
 window.addEventListener("load", function(event) {
     //entry point
     page.init();
-    //console.log(document.querySelectorAll('[data-renderer="carousel"]'));
 });
 
 
@@ -60,7 +59,10 @@ page.carousel.init = function(){
     slideNum = 3,
     
     slideList = [],
+    windowWidth,
+    nextBtn,
     vmData;
+
     self.slideIndex = 1;
 
     for(let i = 0; i < slideNum; i++){
@@ -106,8 +108,14 @@ page.carousel.init = function(){
     })
     this.vm = new Vue(vmData);
 
+    //adjust next button
+    //if(window.visualViewport.width > 768)
+    windowWidth = window.visualViewport.width;
+    nextBtn = document.getElementsByClassName('container')[0].getElementsByClassName('next')[0];
+   
 
-  
+    console.log(document.getElementsByClassName('mySlides')[0].clientWidth);
+    nextBtn.style.left = (window.visualViewport.width * 0.9)+ 'px' ;
 
     function getTemplate(){
         let slideHtml = '';
