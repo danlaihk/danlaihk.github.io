@@ -204,6 +204,18 @@ img {vertical-align: middle;}
   padding: 10% 10%;
 
 }
+
+.card .read-more{
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 1% 2%;
+  text-decoration: none;
+}
+
+.card .read-more:hover{
+  background-color: #e86a1f;
+}
 @media screen and (min-width: 1240px) {
   .card-holder{
     margin-left: -2%;
@@ -237,4 +249,9 @@ img {vertical-align: middle;}
   .card img{
     width: 100%;
   }
+
+  .card .discription{
+    text-align: center;
+  }
+
 }
